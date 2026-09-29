@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrician Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="brand"><div class="bolt">⚡</div><div><h1>Electrician</h1><span>AI Assistant</span></div></div>
+    <div class="card"><h3>Electrical Help</h3><p>Wiring, components, power, motors, transformers, safety and more.</p></div>
+    <div class="card safety"><h3>⚠ Safety First</h3><p>Never work on live electrical circuits. Use proper isolation and qualified help when required.</p></div>
+  </aside>
+
+  <main>
+    <header><div><h2>Electrician Assistant</h2><p>Electrical & electrician topics only</p></div><div class="online">● Online</div></header>
+
+    <section id="chat" class="chat">
+      <div class="msg bot"><div class="avatar">⚡</div><div class="bubble"><b>Electrician Assistant</b><p>Hello! Ask me any electrical or electrician-related question.</p><p>Try <b>MCB, RCCB, wiring, voltage, current, motors, transformers, batteries or earthing.</b></p></div></div>
+    </section>
+
+    <div class="chips">
+      <button onclick="suggest('What is an MCB and how does it work?')">MCB</button>
+      <button onclick="suggest('Explain voltage, current and resistance.')">Basics</button>
+      <button onclick="suggest('What is the purpose of earthing?')">Earthing</button>
+      <button onclick="suggest('How does a transformer work?')">Transformer</button>
+    </div>
+
+    <form id="form">
+      <textarea id="input" placeholder="Ask an electrical question..." rows="1"></textarea>
+      <button id="send" type="submit">➤</button>
+    </form>
+    <div class="note">Educational assistance only • Follow local electrical safety rules</div>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
